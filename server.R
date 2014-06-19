@@ -15,7 +15,9 @@ prediction <- function(c, w) {
 
 
 shinyServer(
+
   function(input, output) {
+
     output$distPlot <- renderPlot({
       result <- prediction(input$cylinders, input$weight)
 
@@ -34,4 +36,5 @@ shinyServer(
 
     })
   }
+
 )
